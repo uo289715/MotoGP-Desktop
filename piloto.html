@@ -5,6 +5,7 @@
     <!-- Datos que describen el documento -->
     <meta charset="UTF-8" />
     <title>MotoGP-Piloto</title>
+    <link rel="icon" href="multimedia/favicon.ico">
     <meta name ="author" content ="Javier Gutiérrez Esquinas" />
     <meta name ="description" content ="Información sobre un piloto de MotoGP" />
     <meta name ="keywords" content ="Piloto, Maverick, Viñales, Moto, MotoGP" />
@@ -25,7 +26,19 @@
         <a href="juegos.html" title="Juegos de MotoGP-Desktop">Juegos</a>
         <a href="ayuda.html" title="Ayuda de MotoGP-Desktop">Ayuda</a>
     </nav>
+
     <h2>Maverick Viñales</h2>
+    <picture>
+        <!-- Imagen para dispositivos móviles -->
+        <source srcset="multimedia/maverick-movil.jpg" media="(max-width: 465px)"/>
+        <!-- Imagen para tablets -->
+        <source srcset="multimedia/maverick-tablet.jpg" media="(max-width: 799px)"/>
+        <!-- Imagen para monitores -->
+        <source srcset="multimedia/maverick.jpg" media="(min-width: 800px)"/>
+        <!-- Imagen por defecto (fallback) -->
+        <img src="multimedia/maverick.jpg" alt="Foto de Maverick Viñales"/>
+    </picture>
+    
     <p>Maverick Viñales Ruiz es un piloto de motociclismo español. Fue campeón del Campeonato del Mundo de Motociclismo de Moto3 en 2013.</p>
 
     <h3>Vida personal</h3>
@@ -34,6 +47,9 @@
         refleja su personalidad determinada y su enfoque competitivo.
         Es un piloto que ha aprendido a sobrellevar la presión mediática y las exigencias del campeonato, manteniéndose concentrado en su desarrollo profesional.
     </p>
+
+    
+
     <h3>Datos del piloto</h3>
     <ul>
         <li>Fecha de Nacimiento: 12 de Enero de 1995</li>
@@ -43,6 +59,12 @@
         <li>Moto: KTM RC 16</li>
         <li>Dorsal: 12</li>
     </ul>
+
+    <video controls preload="auto">
+        <source src="multimedia/presentacion.mp4" type="video/mp4"/>
+        <source src="multimedia/presentacion.webm" type="video/webm"/>
+        Tu navegador no soporta el elemento.
+    </video>
 
     <h3>Trayectoria profesional</h3>
 
@@ -69,6 +91,12 @@
         Su relación con Rossi fue especialmente destacada durante su etapa en Yamaha, ya que compartieron equipo durante varias temporadas. Aunque mantuvieron un trato profesional, existía una fuerte competencia interna. 
         Con Quartararo, Viñales también vivió una etapa de rivalidad deportiva que impulsó a ambos a mejorar su rendimiento en pista.
     </p>
+
+    <audio controls>
+        <source src="multimedia/pole.mp3" type="audio/mpeg"/>
+        <source src="multimedia/pole.wav" type="audio/wav"/>
+        Tu navegador no soporta el elemento.
+    </audio>
 
     <h3>Conceptos de MotoGP</h3>
 
@@ -99,23 +127,24 @@
     <h3>Resultados en 2024</h3>
 
     <table>
+        <caption>Resultados de Maverick Viñales en la temporada 2024</caption>
         <thead>
-          <tr>
-            <th scope="col">Puntos</th>
-            <th scope="col">Posición en la clasificación final</th>
-            <th scope="col">Poles</th>
-            <th scope="col">Victorias</th>
-            <th scope="col">Podios</th>
-          </tr>
+            <tr>
+                <th scope="col" id="puntos">Puntos</th>
+                <th scope="col" id="posicion">Posición en la clasificación final</th>
+                <th scope="col" id="poles">Poles</th>
+                <th scope="col" id="victorias">Victorias</th>
+                <th scope="col" id="podios">Podios</th>
+            </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>190</td>
-            <td>7.º</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-          </tr>
+            <tr>
+                <td headers="puntos">190</td>
+                <td headers="posicion">7.º</td>
+                <td headers="poles">1</td>
+                <td headers="victorias">1</td>
+                <td headers="podios">1</td>
+            </tr>
         </tbody>
     </table>
 
