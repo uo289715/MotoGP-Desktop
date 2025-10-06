@@ -1,2 +1,33 @@
 /* Javier Gutiérrez Esquinas UO289715 */
 /* Estilos generales del proyecto MotoGP-Desktop */
+/* Colores: #f5f5f5 (Fondo general), #222831 (Texto general), #1737D3 (Fondo del header), #FFED94 (Texto del h1), #ffffff (Texto del nav) */
+/* Contraste: Amarillo y Azul -> 7.05:1
+              Azul y blanco -> 8.32:1 */
+
+/*Especificidad: 001*/
+body {
+    font-family: 'Segoe UI', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    background-color: #f5f5f5;      /* Fondo general */
+    color: #222831;
+}
+
+/*Especificidad: 001*/
+header {
+    background-color: #1737D3;      /* Fondo del header */
+}
+
+/*Especificidad: 001*/
+h1 {
+    color: #FFED94;                 /* Color del texto del h1 */
+    
+}
+
+/*Especificidad: 001*/
+nav {
+    color: #ffffff;      /* Fondo del nav */
+}
+
+/*Especificidad: 012*/
+nav a:visited {
+    color: #ffffff; 
+}
