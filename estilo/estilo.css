@@ -14,20 +14,17 @@ body {
 /*Especificidad: 001*/
 header {
     background-color: #1737D3;      /* Fondo del header */
+    color: #ffffff;                 /* Color del texto del header */
 }
 
-/*Especificidad: 001*/
-h1 {
-    color: #FFED94;                 /* Color del texto del h1 */
-    
+/*Especificidad: 002*/
+header a{
+    text-decoration-line: none;
+    color: #ffffff;                 /* Color del texto del header */
 }
 
-/*Especificidad: 001*/
-nav {
-    color: #ffffff;      /* Fondo del nav */
+/*Especificidad: 002*/
+header h1 {
+    color: #FFED94;                 /* Color del h1 */
 }
 
-/*Especificidad: 012*/
-nav a:visited {
-    color: #ffffff; 
-}

@@ -1,0 +1,15 @@
+/* Javier Gutiérrez Esquinas UO289715 */
+/* Estilos generales del proyecto MotoGP-Desktop */
+
+/*Especificidad: 001*/
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/*Especificidad: 001*/
+nav {
+    display: flex;
+    flex-direction: row;
+}
