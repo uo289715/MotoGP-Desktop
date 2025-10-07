@@ -22,13 +22,20 @@ header a{
     color: #ffffff;                 /* Color del texto del header */
 }
 
-/*Especificidad: 002*/
-header h1 {
+/*Especificidad: 003*/
+header h1 a{
     color: #FFED94;                 /* Color del h1 */
+}
+
+/*Especificidad: 002*/
+header + p {
+    font-size: 0.75em; /* Tamaño de las migas */
 }
 
 /*Especificidad: 010*/
 .active {
     color: #FFED94;
+    border-bottom: 0.2em solid #FFED94;
+    
 }
 
