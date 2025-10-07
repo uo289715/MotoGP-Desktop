@@ -6,10 +6,36 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
 }
 
 /*Especificidad: 001*/
-nav {
+header nav {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+}
+
+@media  (min-width: 320px) and (max-width: 799px)  {
+    /*Especificidad: 001*/
+    header {
+        flex-direction: column;
+    }
+
+    /*Especificidad: 001*/
+    header a {
+        flex-direction: column;
+    }
+
+    /*Especificidad: 001*/
+    p:first-of-type {
+        display: none;
+    }
+
+    /*Especificidad: 001*/
+    video,audio {
+        width:100%;
+        height:auto;
+    }
+       
 }

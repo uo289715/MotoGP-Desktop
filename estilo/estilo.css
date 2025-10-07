@@ -14,7 +14,6 @@ body {
 /*Especificidad: 001*/
 header {
     background-color: #1737D3;      /* Fondo del header */
-    color: #ffffff;                 /* Color del texto del header */
 }
 
 /*Especificidad: 002*/
@@ -26,5 +25,10 @@ header a{
 /*Especificidad: 002*/
 header h1 {
     color: #FFED94;                 /* Color del h1 */
+}
+
+/*Especificidad: 010*/
+.active {
+    color: #FFED94;
 }
 
