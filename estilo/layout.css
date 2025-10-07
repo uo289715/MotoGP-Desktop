@@ -21,10 +21,12 @@ header nav {
     /*Especificidad: 001*/
     header {
         flex-direction: column;
+        /*Advertencia por redefinición de flex-direction para la media query*/
     }
 
     /*Especificidad: 002*/
     header nav {
+        /*Advertencia por redefinición de flex-direction para la media query*/
         flex-direction: column;
     }
     /*Especificidad: 003*/

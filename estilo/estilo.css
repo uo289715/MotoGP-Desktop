@@ -14,16 +14,19 @@ body {
 /*Especificidad: 001*/
 header {
     background-color: #1737D3;      /* Fondo del header */
+    /* Advertencia de color que hereda de body */
 }
 
 /*Especificidad: 002*/
 header a{
+    /*Advertencia de color de background que hereda de body*/
     text-decoration-line: none;
     color: #ffffff;                 /* Color del texto del header */
 }
 
 /*Especificidad: 003*/
 header h1 a{
+    /*Advertencia de color de background que hereda de body*/
     color: #FFED94;                 /* Color del h1 */
 }
 
@@ -34,6 +37,7 @@ header + p {
 
 /*Especificidad: 010*/
 .active {
+    /*Advertencia de color de background que hereda de body*/
     color: #FFED94;
     border-bottom: 0.2em solid #FFED94;
     
