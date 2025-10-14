@@ -35,16 +35,21 @@ header nav {
         margin: 1em;
     }
 
-
     /*Especificidad: 001*/
     p:first-of-type {
         display: none;
     }
 
-    /*Especificidad: 001,001*/
-    video,audio {
+    /*Especificidad: 001*/
+    video {
         width:100%;
         height:auto;
     }
+
+    /*Especificidad: 001*/
+    audio {
+        width:100%;
+    }
+       
        
 }
