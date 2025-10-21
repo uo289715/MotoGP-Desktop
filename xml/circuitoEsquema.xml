@@ -43,13 +43,12 @@
     </coordenadas>
     
     <tramos>
-        <!-- Sector 1: Desde línea de meta hasta curva 5 -->
         <tramo>
             <distancia unidades="metros">920</distancia>
             <coordenadas>
-                <longitud_geo>101.7395</longitud_geo>
-                <latitud>2.7620</latitud>
-                <altitud>43</altitud>
+                <longitud_geo>101.732998</longitud_geo>2.760347
+                <latitud>2.760347</latitud>
+                <altitud>38</altitud>
             </coordenadas>
             <sector>1</sector>
         </tramo>
@@ -57,49 +56,89 @@
         <tramo>
             <distancia unidades="metros">85</distancia>
             <coordenadas>
-                <longitud_geo>101.7398</longitud_geo>
-                <latitud>2.7625</latitud>
-                <altitud>43</altitud>
+                <longitud_geo>101.732610</longitud_geo>
+                <latitud>2.760715°N</latitud>
+                <altitud>37</altitud>
             </coordenadas>
             <sector>1</sector>
         </tramo>
-        
+
+        <tramo>
+            <distancia unidades="metros">85</distancia>
+            <coordenadas>
+                <longitud_geo>101.733173</longitud_geo>
+                <latitud>2.760919</latitud>
+                <altitud>38</altitud>
+            </coordenadas>
+            <sector>1</sector>
+        </tramo>
+        <!-- Hasta la curva 1-->
         <tramo>
             <distancia unidades="metros">95</distancia>
             <coordenadas>
-                <longitud_geo>101.7405</longitud_geo>
-                <latitud>2.7630</latitud>
-                <altitud>44</altitud>
+                <longitud_geo>101.733532</longitud_geo>
+                <latitud>2.760972</latitud>
+                <altitud>35</altitud>
             </coordenadas>
             <sector>1</sector>
         </tramo>
-        
+
+        <tramo>
+            <distancia unidades="metros">95</distancia>
+            <coordenadas>
+                <longitud_geo>101.733426</longitud_geo>
+                <latitud>2.761398</latitud>
+                <altitud>33</altitud>
+            </coordenadas>
+            <sector>1</sector>
+        </tramo>
+        <!-- Hasta la curva 2-->
         <tramo>
             <distancia unidades="metros">150</distancia>
             <coordenadas>
-                <longitud_geo>101.7410</longitud_geo>
-                <latitud>2.7635</latitud>
-                <altitud>44</altitud>
+                <longitud_geo>101.733125</longitud_geo>
+                <latitud>2.761858</latitud>
+                <altitud>30</altitud>
             </coordenadas>
             <sector>1</sector>
         </tramo>
-        
+
+        <tramo>
+            <distancia unidades="metros">150</distancia>
+            <coordenadas>
+                <longitud_geo>101.733091</longitud_geo>
+                <latitud>2.762482</latitud>
+                <altitud>26</altitud>
+            </coordenadas>
+            <sector>1</sector>
+        </tramo>
+        <!-- Hasta la curva 3-->
         <tramo>
             <distancia unidades="metros">78</distancia>
             <coordenadas>
-                <longitud_geo>101.7415</longitud_geo>
-                <latitud>2.7638</latitud>
-                <altitud>44</altitud>
+                <longitud_geo>101.733342</longitud_geo>
+                <latitud>2.763354</latitud>
+                <altitud>23</altitud>
             </coordenadas>
             <sector>1</sector>
         </tramo>
-        
+
+        <tramo>
+            <distancia unidades="metros">78</distancia>
+            <coordenadas>
+                <longitud_geo>101.734364</longitud_geo>
+                <latitud>2.764027</latitud>
+                <altitud>23</altitud>
+            </coordenadas>
+            <sector>1</sector>
+        </tramo>
+        <!-- Hasta la curva 4-->
         <tramo>
             <distancia unidades="metros">92</distancia>
             <coordenadas>
-                <longitud_geo>101.7420</longitud_geo>
-                <latitud>2.7642</latitud>
-                <altitud>45</altitud>
+                <longitud_geo>101.736374</longitud_geo>
+                <latitud>2.764725</latitud>
+                <altitud>33</altitud>
             </coordenadas>
             <sector>1</sector>
         </tramo>
@@ -107,30 +146,40 @@
         <tramo>
             <distancia unidades="metros">88</distancia>
             <coordenadas>
-                <longitud_geo>101.7425</longitud_geo>
-                <latitud>2.7645</latitud>
-                <altitud>45</altitud>
-            </coordenadas>
-            <sector>1</sector>
-        </tramo>
-        
-        <!-- Sector 2: Desde curva 6 hasta curva 9 -->
-        <tramo>
-            <distancia unidades="metros">105</distancia>
-            <coordenadas>
-                <longitud_geo>101.7432</longitud_geo>
-                <latitud>2.7643</latitud>
-                <altitud>46</altitud>
+                <longitud_geo>101.737366</longitud_geo>
+                <latitud>2.765159</latitud>
+                <altitud>36</altitud>
             </coordenadas>
             <sector>2</sector>
         </tramo>
         
         <tramo>
+            <distancia unidades="metros">105</distancia>
+            <coordenadas>
+                <longitud_geo>101.737555</longitud_geo>
+                <latitud>2.765162</latitud>
+                <altitud>37</altitud>
+            </coordenadas>
+            <sector>2</sector>
+        </tramo>
+
+        <tramo>
+            <distancia unidades="metros">105</distancia>
+            <coordenadas>
+                <longitud_geo>101.737637</longitud_geo>
+                <latitud>2.765000</latitud>
+                <altitud>38</altitud>
+            </coordenadas>
+            <sector>2</sector>
+        </tramo>
+        
+        <!-- Sector 2: Desde curva 5 hasta curva 9 -->
+        <tramo>
             <distancia unidades="metros">463</distancia>
             <coordenadas>
-                <longitud_geo>101.7440</longitud_geo>
-                <latitud>2.7630</latitud>
-                <altitud>46</altitud>
+                <longitud_geo>101.738042</longitud_geo>
+                <latitud>2.762948</latitud>
+                <altitud>40</altitud>
             </coordenadas>
             <sector>2</sector>
         </tramo>
@@ -138,29 +187,51 @@
         <tramo>
             <distancia unidades="metros">464</distancia>
             <coordenadas>
-                <longitud_geo>101.7450</longitud_geo>
-                <latitud>2.7610</latitud>
-                <altitud>47</altitud>
+                <longitud_geo>101.739020</longitud_geo>
+                <latitud>2.762230</latitud>
+                <altitud>36</altitud>
+            </coordenadas>
+            <sector>2</sector>
+        </tramo>
+
+        <tramo>
+            <distancia unidades="metros">464</distancia>
+            <coordenadas>
+                <longitud_geo>101.739914</longitud_geo>
+                <latitud>2.762640</latitud>
+                <altitud>37</altitud>
             </coordenadas>
             <sector>2</sector>
         </tramo>
         
+        <!-- Hasta curva 6 -->
         <tramo>
             <distancia unidades="metros">98</distancia>
             <coordenadas>
-                <longitud_geo>101.7452</longitud_geo>
-                <latitud>2.7605</latitud>
-                <altitud>47</altitud>
+                <longitud_geo>101.740627</longitud_geo>
+                <latitud>2.763011</latitud>
+                <altitud>39</altitud>
+            </coordenadas>
+            <sector>2</sector>
+        </tramo>
+
+        <tramo>
+            <distancia unidades="metros">98</distancia>
+            <coordenadas>
+                <longitud_geo>101.741325</longitud_geo>
+                <latitud>2.762675</latitud>
+                <altitud>39</altitud>
             </coordenadas>
             <sector>2</sector>
         </tramo>
         
+        <!-- Hasta curva 7 -->
         <tramo>
             <distancia unidades="metros">112</distancia>
             <coordenadas>
-                <longitud_geo>101.7450</longitud_geo>
-                <latitud>2.7598</latitud>
-                <altitud>46</altitud>
+                <longitud_geo>101.743011</longitud_geo>
+                <latitud>2.760723</latitud>
+                <altitud>39</altitud>
             </coordenadas>
             <sector>2</sector>
         </tramo>
@@ -168,93 +239,264 @@
         <tramo>
             <distancia unidades="metros">125</distancia>
             <coordenadas>
-                <longitud_geo>101.7445</longitud_geo>
-                <latitud>2.7592</latitud>
-                <altitud>46</altitud>
+                <longitud_geo>101.743059</longitud_geo>
+                <latitud>2.760649</latitud>
+                <altitud>39</altitud>
             </coordenadas>
             <sector>2</sector>
         </tramo>
-        
-        <!-- Sector 3: Desde curva 10 hasta curva 12 -->
+
+        <tramo>
+            <distancia unidades="metros">125</distancia>
+            <coordenadas>
+                <longitud_geo>101.743028</longitud_geo>
+                <latitud>2.760538</latitud>
+                <altitud>39</altitud>
+            </coordenadas>
+            <sector>2</sector>
+        </tramo>
+        <!-- Hasta curva 8 -->
         <tramo>
             <distancia unidades="metros">95</distancia>
             <coordenadas>
-                <longitud_geo>101.7440</longitud_geo>
-                <latitud>2.7590</latitud>
-                <altitud>45</altitud>
+                <longitud_geo>101.742716</longitud_geo>
+                <latitud>2.759830</latitud>
+                <altitud>38</altitud>
             </coordenadas>
-            <sector>3</sector>
+            <sector>2</sector>
         </tramo>
         
         <tramo>
             <distancia unidades="metros">88</distancia>
             <coordenadas>
-                <longitud_geo>101.7435</longitud_geo>
-                <latitud>2.7585</latitud>
-                <altitud>45</altitud>
+                <longitud_geo>101.742646</longitud_geo>
+                <latitud>2.759748</latitud>
+                <altitud>38</altitud>
             </coordenadas>
-            <sector>3</sector>
+            <sector>2</sector>
         </tramo>
         
         <tramo>
             <distancia unidades="metros">180</distancia>
             <coordenadas>
-                <longitud_geo>101.7425</longitud_geo>
-                <latitud>2.7578</latitud>
-                <altitud>44</altitud>
+                <longitud_geo>101.742518</longitud_geo>
+                <latitud>2.759718</latitud>
+                <altitud>38</altitud>
             </coordenadas>
-            <sector>3</sector>
+            <sector>2</sector>
         </tramo>
         
         <tramo>
             <distancia unidades="metros">170</distancia>
             <coordenadas>
-                <longitud_geo>101.7420</longitud_geo>
-                <latitud>2.7575</latitud>
-                <altitud>44</altitud>
+                <longitud_geo>101.738541</longitud_geo>
+                <latitud>2.759335</latitud>
+                <altitud>34</altitud>
             </coordenadas>
-            <sector>3</sector>
+            <sector>2</sector>
         </tramo>
         
-        <!-- Sector 4: Desde curva 13 hasta línea de meta -->
         <tramo>
             <distancia unidades="metros">145</distancia>
             <coordenadas>
-                <longitud_geo>101.7410</longitud_geo>
-                <latitud>2.7578</latitud>
-                <altitud>43</altitud>
+                <longitud_geo>101.738342</longitud_geo>
+                <latitud>2.759177</latitud>
+                <altitud>34</altitud>
             </coordenadas>
-            <sector>4</sector>
+            <sector>2</sector>
         </tramo>
+
+        <tramo>
+            <distancia unidades="metros">145</distancia>
+            <coordenadas>
+                <longitud_geo>101.738531</longitud_geo>
+                <latitud>2.758960</latitud>
+                <altitud>35</altitud>
+            </coordenadas>
+            <sector>2</sector>
+        </tramo>
+
+        <!-- Sector 3 -->
         
         <tramo>
             <distancia unidades="metros">155</distancia>
             <coordenadas>
-                <longitud_geo>101.7400</longitud_geo>
-                <latitud>2.7585</latitud>
-                <altitud>43</altitud>
+                <longitud_geo>101.738978</longitud_geo>
+                <latitud>2.758685</latitud>
+                <altitud>39</altitud>
             </coordenadas>
-            <sector>4</sector>
+            <sector>3</sector> 
+        </tramo>
+
+        <tramo>
+            <distancia unidades="metros">165</distancia>
+            <coordenadas>
+                <longitud_geo>101.739202</longitud_geo>
+                <latitud>2.758440</latitud>
+                <altitud>41</altitud>
+            </coordenadas>
+            <sector>3</sector>
         </tramo>
         
         <tramo>
             <distancia unidades="metros">165</distancia>
             <coordenadas>
-                <longitud_geo>101.7390</longitud_geo>
-                <latitud>2.7595</latitud>
+                <longitud_geo>101.739301</longitud_geo>
+                <latitud>2.758010</latitud>
                 <altitud>42</altitud>
             </coordenadas>
-            <sector>4</sector>
-        </tramo>
+            <sector>3</sector>
+        </tramo> 
         
+        <tramo>
+            <distancia unidades="metros">165</distancia>
+            <coordenadas>
+                <longitud_geo>101.738837</longitud_geo>
+                <latitud>2.756748</latitud>
+                <altitud>45</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+
+        <tramo>
+            <distancia unidades="metros">165</distancia>
+            <coordenadas>
+                <longitud_geo>101.738626</longitud_geo>
+                <latitud>2.756642</latitud>
+                <altitud>44</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+
+        <tramo>
+            <distancia unidades="metros">165</distancia>
+            <coordenadas>
+                <longitud_geo>101.738341</longitud_geo>
+                <latitud>2.756725</latitud>
+                <altitud>44</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+        <!-- Hasta la curva 12-->
+        <tramo>
+            <distancia unidades="metros">165</distancia>
+            <coordenadas>
+                <longitud_geo>101.736584</longitud_geo>
+                <latitud>2.758185</latitud>
+                <altitud>37</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+
+        <tramo>
+            <distancia unidades="metros">165</distancia>
+            <coordenadas>
+                <longitud_geo>101.736291</longitud_geo>
+                <latitud>2.758332</latitud>
+                <altitud>36</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+
+        <tramo>
+            <distancia unidades="metros">165</distancia>
+            <coordenadas>
+                <longitud_geo>101.735910</longitud_geo>
+                <latitud>2.758265</latitud>
+                <altitud>35</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+        <!-- Hasta la curva 13-->
+        <tramo>
+            <distancia unidades="metros">165</distancia>
+            <coordenadas>
+                <longitud_geo>101.735230</longitud_geo>
+                <latitud>2.757918</latitud>
+                <altitud>33</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+
+        <tramo>
+            <distancia unidades="metros">165</distancia>
+            <coordenadas>
+                <longitud_geo>101.734020</longitud_geo>
+                <latitud>2.758053</latitud>
+                <altitud>33</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+
+        <tramo>
+            <distancia unidades="metros">165</distancia>
+            <coordenadas>
+                <longitud_geo>101.733626</longitud_geo>
+                <latitud>2.758476</latitud>
+                <altitud>35</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+
+        <tramo>
+            <distancia unidades="metros">165</distancia>
+            <coordenadas>
+                <longitud_geo>101.733649</longitud_geo>
+                <latitud>2.758854</latitud>
+                <altitud>36</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+
+        <tramo>
+            <distancia unidades="metros">165</distancia>
+            <coordenadas>
+                <longitud_geo>101.733912</longitud_geo>
+                <latitud>2.758998</latitud>
+                <altitud>37</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+
+        <tramo>
+            <distancia unidades="metros">165</distancia>
+            <coordenadas>
+                <longitud_geo>101.741289</longitud_geo>
+                <latitud>2.760344</latitud>
+                <altitud>36</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+
+        <tramo>
+            <distancia unidades="metros">165</distancia>
+            <coordenadas>
+                <longitud_geo>101.741570</longitud_geo>
+                <latitud>2.760749</latitud>
+                <altitud>38</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+
+        <tramo>
+            <distancia unidades="metros">165</distancia>
+            <coordenadas>
+                <longitud_geo>101.741160</longitud_geo>
+                <latitud>2.760987</latitud>
+                <altitud>37</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+
+        <!--Punto final-->
         <tramo>
             <distancia unidades="metros">318</distancia>
             <coordenadas>
-                <longitud_geo>101.7380</longitud_geo>
-                <latitud>2.7608</latitud>
-                <altitud>42</altitud>
+                <longitud_geo>101.738376</longitud_geo>
+                <latitud>2.760757</latitud>
+                <altitud>36</altitud>
             </coordenadas>
-            <sector>4</sector>
+            <sector>3</sector>
         </tramo>
     </tramos>
     
