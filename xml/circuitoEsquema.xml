@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<circuito xmlns="http://www.uniovi.es"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.uniovi.es circuito.xsd">
+    <nombre>Petronas Sepang International Circuit</nombre>
+    
+    <longitud unidades="metros">5543</longitud>
+    
+    <anchura unidades="metros">16</anchura>
+    
+    <fecha>2025-10-26</fecha>
+    
+    <hora>08:00:00</hora>
+    
+    <numeroVueltas>20</numeroVueltas>
+    
+    <localidad>Sepang</localidad>
+    
+    <pais>Malasia</pais>
+    
+    <patrocinador>Petronas Malaysian Grand Prix</patrocinador>
+    
+    <referencias>
+        <referencia>https://www.motogp.com/es/calendar/2025/event/malaysia/c2cd8f49-5643-440f-84fc-4c37b3ef3f87?tab=circuit-info</referencia>
+        <referencia>https://es.wikipedia.org/wiki/Circuito_Internacional_de_Sepang</referencia>
+        <referencia>https://www.motogp.com/es/calendar?view=grid</referencia>
+    </referencias>
+    
+    <fotografias>
+        <fotografia>multimedia/pista.jpg</fotografia>
+        <fotografia>multimedia/meta.jpg</fotografia>
+    </fotografias>
+    
+    <videos>
+        <video>multimedia/trackGuide.mp4</video>
+    </videos>
+    
+    <coordenadas>
+        <longitud_geo>101.738376</longitud_geo>
+        <latitud>2.760757</latitud>
+        <altitud>36</altitud>
+    </coordenadas>
+    
+    <tramos>
+        <!-- Sector 1: Desde línea de meta hasta curva 5 -->
+        <tramo>
+            <distancia unidades="metros">920</distancia>
+            <coordenadas>
+                <longitud_geo>101.7395</longitud_geo>
+                <latitud>2.7620</latitud>
+                <altitud>43</altitud>
+            </coordenadas>
+            <sector>1</sector>
+        </tramo>
+        
+        <tramo>
+            <distancia unidades="metros">85</distancia>
+            <coordenadas>
+                <longitud_geo>101.7398</longitud_geo>
+                <latitud>2.7625</latitud>
+                <altitud>43</altitud>
+            </coordenadas>
+            <sector>1</sector>
+        </tramo>
+        
+        <tramo>
+            <distancia unidades="metros">95</distancia>
+            <coordenadas>
+                <longitud_geo>101.7405</longitud_geo>
+                <latitud>2.7630</latitud>
+                <altitud>44</altitud>
+            </coordenadas>
+            <sector>1</sector>
+        </tramo>
+        
+        <tramo>
+            <distancia unidades="metros">150</distancia>
+            <coordenadas>
+                <longitud_geo>101.7410</longitud_geo>
+                <latitud>2.7635</latitud>
+                <altitud>44</altitud>
+            </coordenadas>
+            <sector>1</sector>
+        </tramo>
+        
+        <tramo>
+            <distancia unidades="metros">78</distancia>
+            <coordenadas>
+                <longitud_geo>101.7415</longitud_geo>
+                <latitud>2.7638</latitud>
+                <altitud>44</altitud>
+            </coordenadas>
+            <sector>1</sector>
+        </tramo>
+        
+        <tramo>
+            <distancia unidades="metros">92</distancia>
+            <coordenadas>
+                <longitud_geo>101.7420</longitud_geo>
+                <latitud>2.7642</latitud>
+                <altitud>45</altitud>
+            </coordenadas>
+            <sector>1</sector>
+        </tramo>
+        
+        <tramo>
+            <distancia unidades="metros">88</distancia>
+            <coordenadas>
+                <longitud_geo>101.7425</longitud_geo>
+                <latitud>2.7645</latitud>
+                <altitud>45</altitud>
+            </coordenadas>
+            <sector>1</sector>
+        </tramo>
+        
+        <!-- Sector 2: Desde curva 6 hasta curva 9 -->
+        <tramo>
+            <distancia unidades="metros">105</distancia>
+            <coordenadas>
+                <longitud_geo>101.7432</longitud_geo>
+                <latitud>2.7643</latitud>
+                <altitud>46</altitud>
+            </coordenadas>
+            <sector>2</sector>
+        </tramo>
+        
+        <tramo>
+            <distancia unidades="metros">463</distancia>
+            <coordenadas>
+                <longitud_geo>101.7440</longitud_geo>
+                <latitud>2.7630</latitud>
+                <altitud>46</altitud>
+            </coordenadas>
+            <sector>2</sector>
+        </tramo>
+        
+        <tramo>
+            <distancia unidades="metros">464</distancia>
+            <coordenadas>
+                <longitud_geo>101.7450</longitud_geo>
+                <latitud>2.7610</latitud>
+                <altitud>47</altitud>
+            </coordenadas>
+            <sector>2</sector>
+        </tramo>
+        
+        <tramo>
+            <distancia unidades="metros">98</distancia>
+            <coordenadas>
+                <longitud_geo>101.7452</longitud_geo>
+                <latitud>2.7605</latitud>
+                <altitud>47</altitud>
+            </coordenadas>
+            <sector>2</sector>
+        </tramo>
+        
+        <tramo>
+            <distancia unidades="metros">112</distancia>
+            <coordenadas>
+                <longitud_geo>101.7450</longitud_geo>
+                <latitud>2.7598</latitud>
+                <altitud>46</altitud>
+            </coordenadas>
+            <sector>2</sector>
+        </tramo>
+        
+        <tramo>
+            <distancia unidades="metros">125</distancia>
+            <coordenadas>
+                <longitud_geo>101.7445</longitud_geo>
+                <latitud>2.7592</latitud>
+                <altitud>46</altitud>
+            </coordenadas>
+            <sector>2</sector>
+        </tramo>
+        
+        <!-- Sector 3: Desde curva 10 hasta curva 12 -->
+        <tramo>
+            <distancia unidades="metros">95</distancia>
+            <coordenadas>
+                <longitud_geo>101.7440</longitud_geo>
+                <latitud>2.7590</latitud>
+                <altitud>45</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+        
+        <tramo>
+            <distancia unidades="metros">88</distancia>
+            <coordenadas>
+                <longitud_geo>101.7435</longitud_geo>
+                <latitud>2.7585</latitud>
+                <altitud>45</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+        
+        <tramo>
+            <distancia unidades="metros">180</distancia>
+            <coordenadas>
+                <longitud_geo>101.7425</longitud_geo>
+                <latitud>2.7578</latitud>
+                <altitud>44</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+        
+        <tramo>
+            <distancia unidades="metros">170</distancia>
+            <coordenadas>
+                <longitud_geo>101.7420</longitud_geo>
+                <latitud>2.7575</latitud>
+                <altitud>44</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+        
+        <!-- Sector 4: Desde curva 13 hasta línea de meta -->
+        <tramo>
+            <distancia unidades="metros">145</distancia>
+            <coordenadas>
+                <longitud_geo>101.7410</longitud_geo>
+                <latitud>2.7578</latitud>
+                <altitud>43</altitud>
+            </coordenadas>
+            <sector>4</sector>
+        </tramo>
+        
+        <tramo>
+            <distancia unidades="metros">155</distancia>
+            <coordenadas>
+                <longitud_geo>101.7400</longitud_geo>
+                <latitud>2.7585</latitud>
+                <altitud>43</altitud>
+            </coordenadas>
+            <sector>4</sector>
+        </tramo>
+        
+        <tramo>
+            <distancia unidades="metros">165</distancia>
+            <coordenadas>
+                <longitud_geo>101.7390</longitud_geo>
+                <latitud>2.7595</latitud>
+                <altitud>42</altitud>
+            </coordenadas>
+            <sector>4</sector>
+        </tramo>
+        
+        <tramo>
+            <distancia unidades="metros">318</distancia>
+            <coordenadas>
+                <longitud_geo>101.7380</longitud_geo>
+                <latitud>2.7608</latitud>
+                <altitud>42</altitud>
+            </coordenadas>
+            <sector>4</sector>
+        </tramo>
+    </tramos>
+    
+    <vencedor>
+        <piloto>TBD</piloto>
+        <tiempo>PT1H32M45S</tiempo>
+    </vencedor>
+    
+    <clasificacionMundial>
+        <posicion>
+            <puesto>1</puesto>
+            <piloto>TBD</piloto>
+            <puntos>0</puntos>
+        </posicion>
+        <posicion>
+            <puesto>2</puesto>
+            <piloto>TBD</piloto>
+            <puntos>0</puntos>
+        </posicion>
+        <posicion>
+            <puesto>3</puesto>
+            <piloto>TBD</piloto>
+            <puntos>0</puntos>
+        </posicion>
+    </clasificacionMundial>
+</circuito>
