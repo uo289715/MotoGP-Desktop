@@ -258,25 +258,25 @@
     </tramos>
     
     <vencedor>
-        <piloto>TBD</piloto>
-        <tiempo>--:--</tiempo>
+        <piloto>Alex Márquez</piloto>
+        <tiempo>40:09.249</tiempo>
     </vencedor>
     
     <clasificacionMundial>
         <posicion>
             <puesto>1</puesto>
-            <piloto>TBD</piloto>
-            <puntos>-</puntos>
+            <piloto>Marc Márquez</piloto>
+            <puntos>545</puntos>
         </posicion>
         <posicion>
             <puesto>2</puesto>
-            <piloto>TBD</piloto>
-            <puntos>-</puntos>
+            <piloto>Alex Márquez</piloto>
+            <puntos>413</puntos>
         </posicion>
         <posicion>
             <puesto>3</puesto>
-            <piloto>TBD</piloto>
-            <puntos>-</puntos>
+            <piloto>Marco Bezzecchi</piloto>
+            <puntos>291</puntos>
         </posicion>
     </clasificacionMundial>
 </circuito>

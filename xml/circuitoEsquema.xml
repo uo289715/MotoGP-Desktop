@@ -68,7 +68,7 @@
             <distancia unidades="metros">62</distancia>
             <coordenadas>
                 <longitud_geo>101.732610</longitud_geo>
-                <latitud>2.760715°N</latitud>
+                <latitud>2.760715</latitud>
                 <altitud>37</altitud>
             </coordenadas>
             <sector>1</sector>
@@ -512,24 +512,24 @@
     
     <vencedor>
         <piloto>TBD</piloto>
-        <tiempo>PT1H32M45S</tiempo>
+        <tiempo>PT40M9S</tiempo>
     </vencedor>
     
     <clasificacionMundial>
         <posicion>
             <puesto>1</puesto>
-            <piloto>TBD</piloto>
-            <puntos>0</puntos>
+            <piloto>Marc Márquez</piloto>
+            <puntos>545</puntos>
         </posicion>
         <posicion>
             <puesto>2</puesto>
-            <piloto>TBD</piloto>
-            <puntos>0</puntos>
+            <piloto>Alex Márquez</piloto>
+            <puntos>413</puntos>
         </posicion>
         <posicion>
             <puesto>3</puesto>
-            <piloto>TBD</piloto>
-            <puntos>0</puntos>
+            <piloto>Marco Bezzecchi</piloto>
+            <puntos>291</puntos>
         </posicion>
     </clasificacionMundial>
 </circuito>
