@@ -7,6 +7,34 @@ main {
     grid-template-columns: repeat(4, 1fr);
     gap: 1em;
 }
+/*Especificidad: 002*/
 main h2{
     grid-column: span 4;
+}
+@media (max-width: 799px) {
+    @media (max-width: 799px) {
+        main {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(6, auto);
+          width: 100%;
+          box-sizing: border-box;
+          padding: 1em;
+        }
+      
+        main > h2 {
+          grid-column: span 2;
+        }
+      
+        main > article {
+          width: 100%;
+        }
+      
+        main > article img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+      }
+      
 }
