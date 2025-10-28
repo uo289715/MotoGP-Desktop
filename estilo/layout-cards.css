@@ -1,0 +1,12 @@
+/* MotoGP-Desktop*/
+/* Hoja de estilo para el juego de memoria con cartas */
+/* Javier Gutiérrez Esquinas UO289715 */
+/*Especificidad: 001*/
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+}
+main h2{
+    grid-column: span 4;
+}
