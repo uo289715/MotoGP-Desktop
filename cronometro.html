@@ -8,11 +8,13 @@
     <link rel="icon" href="multimedia/favicon.ico">
     <meta name ="author" content ="Javier Gutiérrez Esquinas" />
     <meta name ="description" content ="Juegos de MotoGP Desktop" />
-    <meta name ="keywords" content ="Juegos, Moto, MotoGP" />
+    <meta name ="keywords" content ="Juegos, Moto, Cronometro, MotoGP" />
     <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css" /> 
     <link rel="stylesheet" type="text/css" href="estilo/layout.css" /> 
+
+    <script src="js/cronometro.js"></script>
 
 </head>
 
@@ -33,12 +35,18 @@
         </nav>
     </header>
 
-    <p>Estás en: <a href="index.html">Inicio</a> &gt;&gt; <strong>Juegos</strong></p>
+    <p>Estás en: <a href="index.html">Inicio</a> &gt;&gt; <a href="juegos.html">Juegos</a>  &gt;&gt; <strong>Cronometro</strong></p>
 
-    <h2>Juegos de MotoGP-Desktop</h2>
-    <ul>
-        <li><a href="memoria.html">Juego de memoria</a></li>
-        <li><a href="cronometro.html">Cronómetro</a></li>
-    </ul>
+    <main>
+        <p>00:00.0</p>
+        <button type="button" onclick="miCronometro.arrancar()">Arrancar</button>
+        <button type="button" onclick="miCronometro.parar()">Parar</button>
+        <button type="button" onclick="miCronometro.reiniciar()">Reiniciar</button>
+    </main>
+
+    <script>
+        // Crear una instancia global del cronómetro para los botones
+        const miCronometro = new Cronometro();
+    </script>
 </body>
 </html>
