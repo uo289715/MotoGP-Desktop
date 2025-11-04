@@ -10,6 +10,11 @@ class Memoria {
 
       // Desbloquear el tablero para empezar a jugar
       this.tablero_bloqueado = false;
+
+      // Iniciar el cronómetro
+      this.cronometro = new Cronometro();
+      this.cronometro.arrancar();
+
     }
 
     voltearCarta(carta) {
@@ -62,7 +67,7 @@ class Memoria {
 
     reiniciarAtributos() {
       // Devuelve los atributos al estado inicial
-      this.tablero_bloqueado = true;
+      this.tablero_bloqueado = false;
       this.primera_carta = null;
       this.segunda_carta = null;
     }
@@ -94,6 +99,7 @@ class Memoria {
       // Si todas las cartas están reveladas, el juego ha terminado
       if (todasReveladas) {
           console.log("¡Juego terminado!");
+          this.cronometro.parar();
       }
     }
 

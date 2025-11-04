@@ -11,8 +11,18 @@ main {
 main h2{
     grid-column: span 4;
 }
+
+/*Especificidad: 002*/
+main p {
+  grid-column: span 4;
+  text-align: center;
+  font-size: 1.2em;
+  margin: 0;
+}
+
 @media (max-width: 799px) {
     @media (max-width: 799px) {
+        /*Especificidad: 001*/
         main {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
@@ -21,15 +31,15 @@ main h2{
           box-sizing: border-box;
           padding: 1em;
         }
-      
+        /*Especificidad: 002*/
         main > h2 {
           grid-column: span 2;
         }
-      
+        /*Especificidad: 002*/
         main > article {
           width: 100%;
         }
-      
+        /*Especificidad: 003*/
         main > article img {
           width: 100%;
           height: auto;

@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="estilo/cards.css" /> 
     <link rel="stylesheet" type="text/css" href="estilo/layout-cards.css" /> 
 
+    <script src="js/cronometro.js"></script>
     <script src="js/memoria.js"></script>
 
 </head>
@@ -38,13 +39,11 @@
     </header>
 
     <p>Estás en: <a href="index.html">Inicio</a> &gt;&gt; <a href="juegos.html">Juegos</a>  &gt;&gt; <strong>Juego de memoria</strong></p>
-
-    <script>
-        const memoria = new Memoria();
-    </script>
     
     <main>
         <h2>Juego de memoria con cartas</h2>
+        <p>00:00.0</p>
+
         <article onclick="memoria.voltearCarta(this)">
             <h3>Memory card</h3>
             <img src="multimedia/logos/honda.svg" alt="Logo-Honda">
@@ -95,5 +94,9 @@
         </article>
     </main>
     
+    <script>
+        const memoria = new Memoria();
+    </script>
+
 </body>
 </html>
