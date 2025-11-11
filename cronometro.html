@@ -39,14 +39,14 @@
 
     <main>
         <p>00:00.0</p>
-        <button type="button" onclick="miCronometro.arrancar()">Arrancar</button>
-        <button type="button" onclick="miCronometro.parar()">Parar</button>
-        <button type="button" onclick="miCronometro.reiniciar()">Reiniciar</button>
+        <button type="button">Arrancar</button>
+        <button type="button">Parar</button>
+        <button type="button">Reiniciar</button>
     </main>
 
     <script>
-        // Crear una instancia global del cronómetro para los botones
         const miCronometro = new Cronometro();
+        miCronometro.asignarEventos();
     </script>
 </body>
 </html>
