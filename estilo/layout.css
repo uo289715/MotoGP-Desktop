@@ -50,6 +50,12 @@ header nav {
     audio {
         width:100%;
     }
+
+    /*Especificidad: 003*/
+    article h2 + img {
+        width: 100%;
+        height: auto;
+    }
        
        
 }

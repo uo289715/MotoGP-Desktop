@@ -1,4 +1,5 @@
 // Clase Cronometro
+"use strict";
 class Cronometro {
     // Atributos privados
     #tiempo;

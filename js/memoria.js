@@ -1,3 +1,4 @@
+"use strict";
 class Memoria {
   // Atributos privados (con #)
   #tablero_bloqueado;
