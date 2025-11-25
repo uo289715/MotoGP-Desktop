@@ -185,8 +185,124 @@ class CargadorSVG {
     }
 }
 
-// Instanciar las clases cuando el DOM esté completamente cargado
-document.addEventListener('DOMContentLoaded', () => {
+class CargadorKML {
+    constructor() {
+        window.leerArchivoKML = (files) => this.leerArchivoKML(files);
+
+        mapboxgl.accessToken = "pk.eyJ1IjoidW8yODk3MTUiLCJhIjoiY200aThqdXMxMGZiazJqc2lzbnEzc2tmZSJ9.hSpTqaaIkexxJuFwH5BF9w";
+
+        this.origen = null;
+        this.trazado = null;
+        this.mapa = null;
+        this._containerElement = null;
+    }
+
+    leerArchivoKML(files) {
+        if (!files || files.length === 0) return;
+
+        const archivo = files[0];
+        if (!archivo.name.endsWith('.kml')) {
+            alert("Seleccione un archivo .kml");
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = e => this.procesarKML(e.target.result);
+        reader.readAsText(archivo);
+    }
+
+    procesarKML(texto) {
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(texto, "text/xml");
+        const NS = "http://www.opengis.net/kml/2.2";
+
+        const coordsNodes = xml.getElementsByTagNameNS(NS, "coordinates");
+        if (coordsNodes.length < 2) {
+            alert("KML inválido: falta Point o LineString.");
+            return;
+        }
+
+        // Punto de inicio
+        const inicio = coordsNodes[0].textContent.trim().split(',').map(Number);
+        this.origen = { lon: inicio[0], lat: inicio[1] };
+
+        // Línea completa
+        const lista = coordsNodes[1].textContent.trim().split(/\s+/);
+        this.trazado = lista.map(l => {
+            const p = l.split(',').map(Number);
+            return { lon: p[0], lat: p[1] };
+        });
+
+        // Dibujar el mapa
+        this.insertarCapaKML();
+    }
+
+    insertarCapaKML() {
+        // Buscar el único <div> permitido para el mapa
+        const containerDiv = document.querySelector("main section:nth-of-type(4) div");
+        if (!containerDiv) {
+            alert("Falta el <div> contenedor del mapa.");
+            return;
+        }
+
+        this._containerElement = containerDiv;
+
+        if (!this.mapa) {
+            this.mapa = new mapboxgl.Map({
+                container: this._containerElement,
+                style: 'mapbox://styles/mapbox/streets-v12',
+                center: [this.origen.lon, this.origen.lat],
+                zoom: 15
+            });
+
+            this.mapa.addControl(new mapboxgl.NavigationControl());
+
+            this.mapa.on("load", () => this._dibujarEnMapa());
+        } else {
+            this._dibujarEnMapa();
+        }
+    }
+
+    _dibujarEnMapa() {
+        if (!this.mapa) return;
+
+        // Marcador de inicio
+        new mapboxgl.Marker()
+            .setLngLat([this.origen.lon, this.origen.lat])
+            .addTo(this.mapa);
+
+        // Polilínea
+        const coords = this.trazado.map(p => [p.lon, p.lat]);
+
+        if (this.mapa.getLayer("linea")) this.mapa.removeLayer("linea");
+        if (this.mapa.getSource("linea")) this.mapa.removeSource("linea");
+
+        this.mapa.addSource("linea", {
+            type: "geojson",
+            data: {
+                type: "Feature",
+                geometry: { type: "LineString", coordinates: coords }
+            }
+        });
+
+        this.mapa.addLayer({
+            id: "linea",
+            type: "line",
+            source: "linea",
+            paint: { "line-color": "#ff0000", "line-width": 4 }
+        });
+
+        const bounds = coords.reduce(
+            (b, c) => b.extend(c),
+            new mapboxgl.LngLatBounds(coords[0], coords[0])
+        );
+
+        this.mapa.fitBounds(bounds, { padding: 30 });
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
     new Circuito();
     new CargadorSVG();
+    new CargadorKML();
 });

@@ -53,7 +53,6 @@ class Html:
         """Genera la sección body del HTML"""
         body = '<body>\n'
         body += '    <!-- Datos con el contenidos que aparece en el navegador -->\n'
-        body += self.generar_header()
         body += self.generar_contenido()
         body += '</body>\n'
         return body
@@ -62,9 +61,7 @@ class Html:
         """Genera el header del documento"""
         nombre_circuito = self.obtener_texto('.//c:nombre')
         
-        header = '    <header>\n'
-        header += '        <h1>MotoGP Desktop - Información del Circuito</h1>\n'
-        header += '    </header>\n\n'
+        header = '        <h1>MotoGP Desktop - Información del Circuito</h1>\n'
         return header
     
     def generar_contenido(self):
@@ -106,6 +103,7 @@ class Html:
         patrocinador = self.obtener_texto('.//c:patrocinador')
         
         contenido = '    <main>\n'
+        contenido += self.generar_header()
         contenido += '        <h2>' + nombre + '</h2>\n\n'
         contenido += '        <section>\n'
         contenido += '            <h3>Datos Generales</h3>\n'
