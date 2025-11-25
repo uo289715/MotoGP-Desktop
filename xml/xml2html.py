@@ -201,8 +201,8 @@ class Html:
         
         contenido = '        <section>\n'
         contenido += '            <h3>Vencedor</h3>\n'
-        contenido += '            <p><strong>Piloto:</strong> ' + piloto + '</p>\n'
-        contenido += '            <p><strong>Tiempo:</strong> ' + tiempo + '</p>\n'
+        contenido += '            <p>Piloto: ' + piloto + '</p>\n'
+        contenido += '            <p>Tiempo: ' + tiempo + '</p>\n'
         contenido += '        </section>\n\n'
         
         return contenido

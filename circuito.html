@@ -13,6 +13,8 @@
 
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css" /> 
     <link rel="stylesheet" type="text/css" href="estilo/layout.css" /> 
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.17.0-beta.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.17.0-beta.1/mapbox-gl.js"></script>
 
     <script src="js/circuito.js"></script>
 
@@ -48,6 +50,23 @@
                 <input type="file" accept=".html,.htm" />
             </label>
         </section>
+
+        <section>
+            <h3>Cargar Mapa SVG del Circuito</h3>
+            <p>Selecciona un archivo SVG con el mapa del circuito:</p>
+            <label>
+                <input type="file" accept=".svg,image/svg+xml" onchange="leerArchivoSVG(this.files)" />
+            </label>
+        </section>
+
+        <section>
+            <h3>Cargar Archivo KML del Circuito</h3>
+            <p>Selecciona el archivo circuito.kml para cargar las coordenadas del circuito:</p>
+            <label>
+                <input type="file" accept=".kml" onchange="leerArchivoKML(this.files)" />
+            </label>
+        </section>
+        
     </main>
     
 </body>

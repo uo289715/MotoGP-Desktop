@@ -28,12 +28,12 @@
     </referencias>
     
     <fotografias>
-        <fotografia>../multimedia/pista.jpg</fotografia>
-        <fotografia>../multimedia/meta.jpg</fotografia>
+        <fotografia>multimedia/pista.jpg</fotografia>
+        <fotografia>multimedia/meta.jpg</fotografia>
     </fotografias>
     
     <videos>
-        <video>../multimedia/trackGuide.mp4</video>
+        <video>multimedia/trackGuide.mp4</video>
     </videos>
     
     <coordenadas>
@@ -511,7 +511,7 @@
     </tramos>
     
     <vencedor>
-        <piloto>TBD</piloto>
+        <piloto>Alex Márquez</piloto>
         <tiempo>PT40M9S</tiempo>
     </vencedor>
     

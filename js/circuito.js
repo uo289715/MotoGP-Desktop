@@ -116,7 +116,77 @@ class Circuito {
         main.appendChild(seccion);
     }
 }
-// Instanciar la clase Circuito cuando el DOM esté completamente cargado
+
+// Clase para cargar y mostrar un archivo SVG
+class CargadorSVG {
+    constructor() {
+        window.leerArchivoSVG = (files) => this.leerArchivoSVGDesdeArchivos(files);
+    }
+
+    leerArchivoSVGDesdeArchivos(files) {
+        const archivo = files[0];
+        
+        if (!archivo) {
+            alert('No se ha seleccionado ningún archivo.');
+            return;
+        }
+
+        if (archivo.type !== 'image/svg+xml' && !archivo.name.endsWith('.svg')) {
+            alert('Por favor, selecciona un archivo SVG válido.');
+            return;
+        }
+
+        const lector = new FileReader();
+        
+        lector.onload = (e) => {
+            this.insertarSVG(e.target.result);
+        };
+        
+        lector.onerror = () => {
+            alert('Error al leer el archivo SVG.');
+        };
+        
+        lector.readAsText(archivo);
+    }
+
+    insertarSVG(contenidoTexto) {
+        // Buscar el contenedor (la segunda sección del main)
+        const contenedor = document.querySelector('main section:nth-of-type(2)');
+        
+        if (!contenedor) {
+            alert('No se encontró el contenedor para el SVG.');
+            return;
+        }
+
+        const parser = new DOMParser();
+        const documentoSVG = parser.parseFromString(contenidoTexto, 'image/svg+xml');
+        const elementoSVG = documentoSVG.documentElement;
+
+        // Verificar si hubo errores al parsear
+        const errorNode = documentoSVG.querySelector('parsererror');
+        if (errorNode) {
+            alert('Error al parsear el archivo SVG.');
+            return;
+        }
+
+        // Limpiar el contenedor manteniendo el título y el input
+        const h3 = contenedor.querySelector('h3');
+        const p = contenedor.querySelector('p');
+        const label = contenedor.querySelector('label');
+        
+        contenedor.innerHTML = '';
+        
+        if (h3) contenedor.appendChild(h3);
+        if (p) contenedor.appendChild(p);
+        if (label) contenedor.appendChild(label);
+        
+        // Añadir el SVG
+        contenedor.appendChild(elementoSVG);
+    }
+}
+
+// Instanciar las clases cuando el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', () => {
     new Circuito();
+    new CargadorSVG();
 });

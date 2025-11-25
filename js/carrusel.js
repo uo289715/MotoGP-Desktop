@@ -14,31 +14,25 @@ class Carrusel {
     }
 
     getFotografias() { 
-        const flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+        const flickrAPI = "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=796d1f5b5216ccc53342fa2cec5c8c54&tags=MotoGP%2C+Sepang%2C+Race&tag_mode=all&format=json&nojsoncallback=1";
 
-        $.getJSON(flickrAPI, {
-            tags: this.#busqueda,
-            tagmode: "any",
-            format: "json"
-        })
+        $.getJSON(flickrAPI)
         .done((data) => {
             this.procesarJSONFotografias(data);
         });
     }
 
     procesarJSONFotografias(data) {
-
         this.fotos = [];
         let contador = 0;
 
-        $.each(data.items, (i, item) => {
+        $.each(data.photos.photo, (i, item) => {
             if (contador <= this.#maximo) {
-
                 const foto = {
                     titulo: item.title,
-                    url: item.media.m.replace("_m.jpg", "_z.jpg"),
-                    autor: item.author,
-                    enlace: item.link
+                    url: `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_z.jpg`,
+                    autor: item.owner,
+                    enlace: `https://www.flickr.com/photos/${item.owner}/${item.id}`
                 };
 
                 this.fotos.push(foto);
@@ -50,14 +44,11 @@ class Carrusel {
     }
 
     mostrarFotografias() {
-
-        // Crear <main> si no existe
         if ($("main").length === 0) {
             $("body").append("<main></main>");
         }
         const main = $("main");
     
-        // Tomar la primera sección o crear una nueva para el carrusel
         let seccionCarrusel = main.children("section").first();
         if (seccionCarrusel.length === 0) {
             seccionCarrusel = $("<section></section>");
@@ -66,35 +57,29 @@ class Carrusel {
             main.prepend(seccionCarrusel);
         }
     
-        // Tomar el primer <article> dentro de la sección o crearlo
         let articleFoto = seccionCarrusel.children("article").first();
         if (articleFoto.length === 0) {
             articleFoto = $("<article></article>");
             seccionCarrusel.append(articleFoto);
         }
     
-        // Vaciar solo el contenido del artículo y poner la nueva foto
         articleFoto.empty();
         const foto = this.fotos[this.#actual];
         const img = $(`<img src="${foto.url}" alt="${foto.titulo}">`);
         articleFoto.append(img);
     
-        // Iniciar temporizador si no existe
         if (!this.intervalo) {
             this.intervalo = setInterval(this.cambiarFotografia.bind(this), 3000);
         }
     }    
 
     cambiarFotografia() {
-
         this.#actual++;
 
-        // Volver a la primera foto cuando se llegue a la última
         if (this.#actual > this.#maximo) {
             this.#actual = 0;
         }
 
-        // Volver a mostrar la imagen nueva
         this.mostrarFotografias();
     }
 }

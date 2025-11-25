@@ -11,7 +11,9 @@ class Noticias {
 
     buscar() {
         // Construir la URL con los parámetros
-        const urlCompleta = `${this.#url}?api_token=${this.#apiKey}&q=${encodeURIComponent(this.#busqueda)}&language=es&limit=5`;
+        const urlCompleta = `${this.#url}?api_token=${this.#apiKey}&search=${encodeURIComponent(this.#busqueda)}&language=es&limit=3`;
+
+        console.log("URL de búsqueda:", urlCompleta); // DEBUG
 
         // Retornar la promesa de fetch
         return fetch(urlCompleta)
