@@ -350,7 +350,7 @@ if (isset($_POST['guardar_resultados'])) {
                     <fieldset>
                         <legend>Pregunta 2</legend>
                         <label>
-                            ¿En qué país se encuentra el circuito?
+                            ¿En qué lugar nació Maverick Viñales?
                             <input type="text" name="pregunta2" required />
                         </label>
                     </fieldset>
@@ -382,7 +382,7 @@ if (isset($_POST['guardar_resultados'])) {
                     <fieldset>
                         <legend>Pregunta 6</legend>
                         <label>
-                            ¿Quién lidera la clasificación mundial?
+                            ¿Quién lidera la clasificación mundial al terminar la carrera?
                             <input type="text" name="pregunta6" required />
                         </label>
                     </fieldset>
@@ -406,8 +406,8 @@ if (isset($_POST['guardar_resultados'])) {
                     <fieldset>
                         <legend>Pregunta 9</legend>
                         <label>
-                            ¿En qué localidad se encuentra el circuito?
-                            <input type="text" name="pregunta9" required />
+                            ¿En qué año fue Maverick Viñales campeon del mundo?
+                            <input type="number" name="pregunta9" required />
                         </label>
                     </fieldset>
                     
