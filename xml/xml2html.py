@@ -192,10 +192,25 @@ class Html:
         
         return contenido
     
+    def formatear_duracion(self, duracion):
+        """
+        Convierte una duración xs:duration (ej: PT40M9S) a formato mm:ss
+        """
+        import re
+        minutos = segundos = 0
+        match = re.match(r'PT(?:(\d+)M)?(?:(\d+)S)?', duracion)
+        if match:
+            if match.group(1):
+                minutos = int(match.group(1))
+            if match.group(2):
+                segundos = int(match.group(2))
+        return f"{minutos:02d}:{segundos:02d}"
+
     def generar_vencedor(self):
         """Genera la sección del vencedor"""
         piloto = self.obtener_texto('.//c:vencedor/c:piloto')
-        tiempo = self.obtener_texto('.//c:vencedor/c:tiempo')
+        tiempo_raw = self.obtener_texto('.//c:vencedor/c:tiempo')
+        tiempo = self.formatear_duracion(tiempo_raw)
         
         contenido = '        <section>\n'
         contenido += '            <h3>Vencedor</h3>\n'

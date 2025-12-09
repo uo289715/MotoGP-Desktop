@@ -406,7 +406,7 @@ if (isset($_POST['guardar_resultados'])) {
                     <fieldset>
                         <legend>Pregunta 9</legend>
                         <label>
-                            ¿En qué año fue Maverick Viñales campeon del mundo?
+                            ¿Cuando logró Maverick Viñales su primera victoria en MotoGP?
                             <input type="number" name="pregunta9" required />
                         </label>
                     </fieldset>
