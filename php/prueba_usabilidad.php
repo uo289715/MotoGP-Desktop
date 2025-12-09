@@ -414,7 +414,7 @@ if (isset($_POST['guardar_resultados'])) {
                     <fieldset>
                         <legend>Pregunta 10</legend>
                         <label>
-                            ¿Cuál es la altitud inicial del circuito en metros?
+                            ¿En que posición terminó Maverick Viñales el año pasado?
                             <input type="number" name="pregunta10" required />
                         </label>
                     </fieldset>

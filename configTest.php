@@ -38,7 +38,7 @@ if (isset($_POST['exportar'])) {
     <?php if ($msg) echo "<p>$msg</p>"; ?>
     <form method="post">
         <button name="reiniciar" type="submit">Reiniciar Base de Datos</button>
-        <button name="eliminar" type="submit" onclick="return confirm('¿Seguro que quieres eliminar la base de datos?')">Eliminar Base de Datos</button>
+        <button name="eliminar" type="submit">Eliminar Base de Datos</button>
         <button name="exportar" type="submit">Exportar Datos a CSV</button>
     </form>
 </body>

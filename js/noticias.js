@@ -53,12 +53,17 @@ class Noticias {
     }
 
     mostrarNoticias() {
-        // Crear sección debajo del carrusel 
+    // Esperar a que exista el article del carrusel
+    const intentarInsertar = () => {
         const articleCarrusel = document.querySelector("main article");
+        if (!articleCarrusel) {
+            setTimeout(intentarInsertar, 100);
+            return;
+        }
+
         const seccionNoticias = document.createElement("section");
         seccionNoticias.innerHTML = "<h3>Noticias sobre " + this.#busqueda + "</h3>";
 
-        // Agregar cada noticia
         this.#noticias.forEach(noticia => {
             const article = document.createElement("article");
 
@@ -83,9 +88,11 @@ class Noticias {
             seccionNoticias.appendChild(article);
         });
 
-        // Insertar la sección después del carrusel
         articleCarrusel.insertAdjacentElement('afterend', seccionNoticias);
-    }
+    };
+
+    intentarInsertar();
+}
 }
 
 $(document).ready(function() {
