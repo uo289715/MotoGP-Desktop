@@ -13,7 +13,7 @@ if (isset($_POST['eliminar'])) {
     $msg = $result === true ? "Base de datos eliminada." : $result;
 }
 if (isset($_POST['exportar'])) {
-    $result = $config->exportarDatosCSV(__DIR__);
+    $result = $config->exportarDatosCSV(__DIR__ . '/php');
     $msg = $result === true ? "Datos exportados a CSV." : $result;
 }
 ?>
