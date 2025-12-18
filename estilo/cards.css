@@ -30,7 +30,7 @@ article img {
     height: 100%;
     position: absolute;
     border-radius: 0.5em;
-    background: #1C7CCC;
+    background: #1C7CCC; /* Advertencia de color que hereda de body */
     backface-visibility: hidden;
 }
 

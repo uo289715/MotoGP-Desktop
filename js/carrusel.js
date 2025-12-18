@@ -48,30 +48,27 @@ class Carrusel {
             $("body").append("<main></main>");
         }
         const main = $("main");
-    
-        let seccionCarrusel = main.children("section").first();
-        if (seccionCarrusel.length === 0) {
-            seccionCarrusel = $("<section></section>");
-            const h2 = $(`<h2>Imágenes del circuito de ${this.#busqueda}</h2>`);
-            seccionCarrusel.append(h2);
-            main.prepend(seccionCarrusel);
+
+        // Busca el artículo, si no existe lo crea (sin clase)
+        let articleCarrusel = main.children("article").first();
+        if (articleCarrusel.length === 0) {
+            articleCarrusel = $('<article></article>');
+            main.prepend(articleCarrusel);
         }
-    
-        let articleFoto = seccionCarrusel.children("article").first();
-        if (articleFoto.length === 0) {
-            articleFoto = $("<article></article>");
-            seccionCarrusel.append(articleFoto);
-        }
-    
-        articleFoto.empty();
+
+        articleCarrusel.empty();
+
+        const h2 = $(`<h2>Imágenes del circuito de ${this.#busqueda}</h2>`);
+        articleCarrusel.append(h2);
+
         const foto = this.fotos[this.#actual];
         const img = $(`<img src="${foto.url}" alt="${foto.titulo}">`);
-        articleFoto.append(img);
-    
+        articleCarrusel.append(img);
+
         if (!this.intervalo) {
-            this.intervalo = setInterval(this.cambiarFotografia.bind(this), 3000);
+            this.intervalo = setInterval(() => this.cambiarFotografia(), 3000);
         }
-    }    
+    }   
 
     cambiarFotografia() {
         this.#actual++;

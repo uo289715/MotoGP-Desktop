@@ -61,7 +61,7 @@ class Html:
         """Genera el header del documento"""
         nombre_circuito = self.obtener_texto('.//c:nombre')
         
-        header = '        <h1>MotoGP Desktop - Información del Circuito</h1>\n'
+        header = '        <h2>MotoGP Desktop - Información del Circuito</h2>\n'
         return header
     
     def generar_contenido(self):

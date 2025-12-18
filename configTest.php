@@ -18,7 +18,7 @@ if (isset($_POST['exportar'])) {
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <!-- Datos que describen el documento -->
     <meta charset="UTF-8" />

@@ -52,6 +52,7 @@ header a {
 
 /* Especificidad: 002 */
 header a:hover {
+    /* Advertencia de color que hereda de body */
     background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -64,6 +65,7 @@ header a:hover {
 
 /* Especificidad: 002 */
 header + p {
+     /* Advertencia de color que hereda de body */
     font-size: 0.75em; /* Tamaño de las migas */
     padding: 0.5em 1em;
     background-color: #e0e0e0;
@@ -72,6 +74,7 @@ header + p {
 
 /* Especificidad: 003 */
 header + p a {
+    /* Advertencia de color de background que hereda de body */
     color: #1737D3;
     text-decoration: none;
 }
@@ -84,6 +87,7 @@ main {
 
 /* Especificidad: 002 */
 main h2 {
+    /* Advertencia de color de background que hereda de body */
     color: #1737D3;
     border-bottom: 0.15em solid #1737D3;
     padding-bottom: 0.5em;
@@ -92,6 +96,7 @@ main h2 {
 
 /* Especificidad: 001 */
 section {
+    /* Advertencia de color que hereda de body */
     background-color: #ffffff;
     padding: 1.5em;
     margin-bottom: 2em;
@@ -101,6 +106,7 @@ section {
 
 /* Especificidad: 002 */
 section h3 {
+    /* Advertencia de color de background que hereda de body */
     color: #1737D3;
     margin-top: 0;
     margin-bottom: 1em;
@@ -114,6 +120,7 @@ section p {
 
 /* Especificidad: 002 */
 section strong {
+    /* Advertencia de color de background que hereda de body */
     color: #1737D3;
 }
 
@@ -136,6 +143,7 @@ section ul li:last-child {
 
 /* Especificidad: 003 */
 section ul a {
+    /* Advertencia de color de background que hereda de body */
     color: #1737D3;
     word-break: break-all;
     font-size: 0.9em;
@@ -166,6 +174,7 @@ section table {
 
 /* Especificidad: 003 */
 section table caption {
+    /* Advertencia de color de background que hereda de body */
     caption-side: top;
     font-weight: bold;
     color: #1737D3;
@@ -190,11 +199,13 @@ section table tbody td {
 
 /* Especificidad: 005 */
 section table tbody tr:hover {
+     /* Advertencia de color que hereda de body */
     background-color: #f0f0f0;
 }
 
 /* Especificidad: 005 */
 section table tbody tr:nth-child(even) {
+     /* Advertencia de color que hereda de body */
     background-color: #f9f9f9;
 }
 /* Especificidad: 013 */

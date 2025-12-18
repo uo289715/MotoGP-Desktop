@@ -96,18 +96,23 @@ class Circuito {
         info.textContent = `Archivo cargado correctamente.`;
         seccion.appendChild(info);
 
-        // Parsear el contenido HTML para extraer solo el contenido del body
         const parser = new DOMParser();
         const doc = parser.parseFromString(contenido, 'text/html');
         const bodyContent = doc.querySelector('body');
 
         if (bodyContent) {
-            // Clonar los nodos del body parseado
-            const nodos = bodyContent.childNodes;
-            nodos.forEach(nodo => {
-                if (nodo.nodeType === Node.ELEMENT_NODE) {
-                    const nodoClonado = nodo.cloneNode(true);
-                    seccion.appendChild(nodoClonado);
+            // Añadir solo los elementos hijos de body que NO sean <main>
+            bodyContent.childNodes.forEach(nodo => {
+                if (nodo.nodeType === Node.ELEMENT_NODE && nodo.tagName.toLowerCase() !== 'main') {
+                    seccion.appendChild(nodo.cloneNode(true));
+                }
+                // Si el nodo es <main>, añade sus hijos en vez de él
+                if (nodo.nodeType === Node.ELEMENT_NODE && nodo.tagName.toLowerCase() === 'main') {
+                    nodo.childNodes.forEach(hijo => {
+                        if (hijo.nodeType === Node.ELEMENT_NODE) {
+                            seccion.appendChild(hijo.cloneNode(true));
+                        }
+                    });
                 }
             });
         }
@@ -161,6 +166,11 @@ class CargadorSVG {
         const parser = new DOMParser();
         const documentoSVG = parser.parseFromString(contenidoTexto, 'image/svg+xml');
         const elementoSVG = documentoSVG.documentElement;
+
+        if (elementoSVG) {
+            elementoSVG.setAttribute("version", "1.1");
+            document.querySelector("main").appendChild(elementoSVG);
+        }
 
         // Verificar si hubo errores al parsear
         const errorNode = documentoSVG.querySelector('parsererror');
