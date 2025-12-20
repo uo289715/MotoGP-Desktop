@@ -93,18 +93,18 @@ class Clasificacion {
                 echo "<caption>Clasificación del Mundial</caption>";
                 echo "<thead>";
                 echo "<tr>";
-                echo "<th scope='col'>Puesto</th>";
-                echo "<th scope='col'>Piloto</th>";
-                echo "<th scope='col'>Puntos</th>";
+                echo "<th scope='col' id='puesto'>Puesto</th>";
+                echo "<th scope='col' id='piloto'>Piloto</th>";
+                echo "<th scope='col' id='puntos'>Puntos</th>";
                 echo "</tr>";
                 echo "</thead>";
                 echo "<tbody>";
                 
                 foreach ($xml->clasificacionMundial->posicion as $posicion) {
                     echo "<tr>";
-                    echo "<td>{$posicion->puesto}</td>";
-                    echo "<td>{$posicion->piloto}</td>";
-                    echo "<td>{$posicion->puntos}</td>";
+                    echo "<td headers='puesto'>{$posicion->puesto}</td>";
+                    echo "<td headers='piloto'>{$posicion->piloto}</td>";
+                    echo "<td headers='puntos'>{$posicion->puntos}</td>";
                     echo "</tr>";
                 }
                 
