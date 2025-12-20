@@ -1,2 +1,8 @@
 id_observacion,id_usuario,comentarios_facilitador,fecha_observacion
-1,1,"Arreglar la novena pregunta","2025-12-09 09:52:58"
+1,1,"Todo bien, excepto que se debe reformular la novena pregunta","2025-12-09 09:52:58"
+2,2,"Todo bastante fluido y correcto, sin mejoras aparentes","2025-12-19 15:52:18"
+3,3,"Mostró confusión con el mapa dinamico del circuito, deberia de cambiar la media querie","2025-12-19 12:18:42"
+4,4,"Se atascó un poco ya que no sabia que archivos agregar en circuito.html, hay que actualizar la ayuda","2025-12-19 17:30:15"
+5,5,"Comentó que algunos textos se veían pequeños en su pantalla, pero sin problemas aparentes","2025-12-20 10:05:33"
+6,6,"Tuvo dificultades con los botones de carga de archivos en móvil, intentó pulsar varias veces antes de acertar. El resto fue fluido","2025-12-20 11:52:47"
+7,7,"Usuaria satisfecha con la experiencia en tablet. Preguntó si había más ejemplos visuales pero lo completó sin ayuda","2025-12-20 15:22:18"

@@ -1,2 +1,8 @@
 id_resultado,id_usuario,id_dispositivo,tiempo_segundos,formulario_completado,comentarios_problemas,propuestas_mejora,valoracion,fecha_prueba
-1,1,1,201,0,"La novena pregunta no está bien redactada","La novena pregunta",9.0,"2025-12-09 09:52:58"
+1,1,1,201,1,"No entendí bien la pregunta 9, no sé si me pide el año o qué exactamente","Creo que la pregunta 9 está mal escrita o le falta algo",9.0,"2025-12-09 09:52:58"
+2,2,1,245,1,"Todo funciona bien en el ordenador","Quizás poner alguna foto más del circuito",8.0,"2025-12-19 14:48:33"
+3,3,3,289,1,"El mapa se ve raro en el móvil, creo que no se ajusta bien a la pantalla","Ajustar el mapa para que se vea mejor en pantallas pequeñas",6.5,"2025-12-19 10:49:55"
+4,4,2,225,1,"Tuve un poco de duda con que archivos subir","Mejorar la pagina de ayuda",9.5,"2025-12-19 16:15:18"
+5,5,1,198,1,"Bastante intuitivo, solo algún texto pequeño que cuesta leer","Aumentar un poco el tamaño de letra en algunas partes",8.5,"2025-12-20 10:05:33"
+6,6,3,224,1,"Los botones para cargar archivos son difíciles de pulsar en el móvil","Hacer los botones más grandes para móviles",7.0,"2025-12-20 11:52:47"
+7,7,2,189,1,"Muy cómodo usar la tablet, todo claro","Quizás añadir más ejemplos visuales en las instrucciones",9.0,"2025-12-20 15:22:18"
