@@ -41,8 +41,8 @@ main > section:nth-of-type(4) > div {
         margin: 1em;
     }
 
-    /*Especificidad: 001*/
-    p:first-of-type {
+    /*Especificidad: 002*/
+    body > p:first-of-type {
         display: none;
     }
 
@@ -62,6 +62,40 @@ main > section:nth-of-type(4) > div {
         width: 100%;
         height: auto;
     }
-       
+
+    /*Especificidad: 001*/
+    table {
+        width: 100%;
+    }
+
+    /*Especificidad: 002*/
+    table thead {
+        display: none;
+    }
+
+    /*Especificidad: 002*/
+    table tbody tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1em;
+        border: 1px solid #ddd;
+        padding: 0.5em;
+    }
+
+    /*Especificidad: 002*/
+    table tbody td {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5em;
+        border-bottom: 1px solid #eee;
+    }
+
+    /*Especificidad: 003*/
+    table tbody td:before {
+        content: attr(headers);
+        font-weight: bold;
+        text-transform: capitalize;
+        margin-right: 1em;
+    }  
        
 }
