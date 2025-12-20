@@ -17,6 +17,12 @@ header nav {
     justify-content: space-evenly; /* Separa los enlaces */
 }
 
+/* Especificidad: 013 */
+main > section:nth-of-type(4) > div {
+    width: 100%;
+    height: 50em; 
+}
+
 @media (min-width: 320px) and (max-width: 799px)  {
     /*Especificidad: 001*/
     header {
