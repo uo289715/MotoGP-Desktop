@@ -34,13 +34,6 @@ header h1 a {
 }
 
 /* Especificidad: 002 */
-header nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-}
-
-/* Especificidad: 002 */
 header a {
     /* Advertencia de color de background que hereda de body */
     text-decoration-line: none;
@@ -151,7 +144,6 @@ section ul a {
 
 /* Especificidad: 002 */
 section label {
-    display: block;
     margin: 1em 0;
 }
 
@@ -175,7 +167,6 @@ section table {
 /* Especificidad: 003 */
 section table caption {
     /* Advertencia de color de background que hereda de body */
-    caption-side: top;
     font-weight: bold;
     color: #1737D3;
     margin-bottom: 0.5em;
@@ -207,4 +198,32 @@ section table tbody tr:hover {
 section table tbody tr:nth-child(even) {
      /* Advertencia de color que hereda de body */
     background-color: #f9f9f9;
+}
+
+@media (min-width: 320px) and (max-width: 799px)  {
+    /*Especificidad: 003*/
+    header nav a{
+        margin: 1em;
+    }
+
+    /*Especificidad: 002*/
+    table tbody tr {
+        margin-bottom: 1em;
+        border: 1px solid #ddd;
+        padding: 0.5em;
+    }
+
+    /*Especificidad: 002*/
+    table tbody td {
+        padding: 0.5em;
+        border-bottom: 1px solid #eee;
+    }
+
+    /*Especificidad: 003*/
+    table tbody td:before {
+        content: attr(headers);
+        font-weight: bold;
+        text-transform: capitalize;
+        margin-right: 1em;
+    }
 }

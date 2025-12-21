@@ -1,5 +1,5 @@
 /* Javier Gutiérrez Esquinas UO289715 */
-/* Estilos generales del proyecto MotoGP-Desktop */
+/* Estilos de layout del proyecto MotoGP-Desktop */
 
 /*Especificidad: 001*/
 header {
@@ -13,8 +13,20 @@ header {
 header nav {
     display: flex;
     flex-direction: row;
-    flex:1;
+    flex-wrap: wrap;
+    flex: 1;
+    gap: 1em;
     justify-content: space-evenly; /* Separa los enlaces */
+}
+
+/* Especificidad: 002 */
+section label {
+    display: block;
+}
+
+/* Especificidad: 003 */
+section table caption {
+    caption-side: top;
 }
 
 /* Especificidad: 013 */
@@ -35,10 +47,10 @@ main > section:nth-of-type(4) > div {
         /*Advertencia por redefinición de flex-direction para la media query*/
         flex-direction: column;
     }
+    
     /*Especificidad: 003*/
     header nav a{
         flex-direction: column;
-        margin: 1em;
     }
 
     /*Especificidad: 002*/
@@ -48,13 +60,13 @@ main > section:nth-of-type(4) > div {
 
     /*Especificidad: 001*/
     video {
-        width:100%;
-        height:auto;
+        width: 100%;
+        height: auto;
     }
 
     /*Especificidad: 001*/
     audio {
-        width:100%;
+        width: 100%;
     }
 
     /*Especificidad: 003*/
@@ -77,25 +89,11 @@ main > section:nth-of-type(4) > div {
     table tbody tr {
         display: flex;
         flex-direction: column;
-        margin-bottom: 1em;
-        border: 1px solid #ddd;
-        padding: 0.5em;
     }
 
     /*Especificidad: 002*/
     table tbody td {
         display: flex;
         justify-content: space-between;
-        padding: 0.5em;
-        border-bottom: 1px solid #eee;
     }
-
-    /*Especificidad: 003*/
-    table tbody td:before {
-        content: attr(headers);
-        font-weight: bold;
-        text-transform: capitalize;
-        margin-right: 1em;
-    }  
-       
 }
