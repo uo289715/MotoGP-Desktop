@@ -286,31 +286,42 @@ if (isset($_POST['guardar_resultados'])) {
         <section>
             <h2>Registro de Usuario</h2>
             <form method="post" action="prueba_usabilidad.php">
-                <label>Edad: <input type="number" name="edad" min="1" max="120" required /></label><br>
-                <label>Género:
-                    <select name="id_genero" required>
+                <p>
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" min="1" max="120" required />
+                </p>
+                
+                <p>
+                    <label for="id_genero">Género:</label>
+                    <select id="id_genero" name="id_genero" required>
                         <option value="">Seleccione...</option>
                         <?php foreach ($generos as $genero): ?>
                             <option value="<?= $genero['id_genero'] ?>"><?= htmlspecialchars($genero['nombre_genero']) ?></option>
                         <?php endforeach; ?>
                     </select>
-                </label><br>
-                <label>Profesión:
-                    <select name="id_profesion" required>
+                </p>
+                
+                <p>
+                    <label for="id_profesion">Profesión:</label>
+                    <select id="id_profesion" name="id_profesion" required>
                         <option value="">Seleccione...</option>
                         <?php foreach ($profesiones as $profesion): ?>
                             <option value="<?= $profesion['id_profesion'] ?>"><?= htmlspecialchars($profesion['nombre_profesion']) ?></option>
                         <?php endforeach; ?>
                     </select>
-                </label><br>
-                <label>Pericia informática (0-10): <input type="number" name="pericia_informatica" min="0" max="10" step="0.1" required /></label><br>
+                </p>
+                
+                <p>
+                    <label for="pericia_informatica">Pericia informática (0-10):</label>
+                    <input type="number" id="pericia_informatica" name="pericia_informatica" min="0" max="10" step="0.1" required />
+                </p>
+                
                 <button type="submit" name="registrar_usuario">Registrar y continuar</button>
             </form>
         </section>
         <?php endif; ?>
 
         <?php if (isset($_SESSION['guardado'])): ?>
-            <!-- Mensaje de confirmación -->
             <section>
                 <h2>¡Prueba Completada!</h2>
                 <p>Los resultados han sido guardados correctamente en la base de datos.</p>
@@ -321,7 +332,6 @@ if (isset($_POST['guardar_resultados'])) {
             ?>
             
         <?php elseif (!isset($_SESSION['prueba_iniciada'])): ?>
-            <!-- Pantalla inicial -->
             <section>
                 <h2>Bienvenido a la Prueba de Usabilidad</h2>
                 <p>Esta prueba consiste en responder 10 preguntas sobre el proyecto MotoGP-Desktop.</p>
@@ -333,7 +343,6 @@ if (isset($_POST['guardar_resultados'])) {
             </section>
             
         <?php elseif (!isset($_SESSION['prueba_terminada'])): ?>
-            <!-- Formulario de preguntas -->
             <section>
                 <h2>Cuestionario de Usabilidad</h2>
                 <p>Por favor, responda a todas las preguntas antes de finalizar.</p>
@@ -341,82 +350,62 @@ if (isset($_POST['guardar_resultados'])) {
                 <form method="post" action="prueba_usabilidad.php">
                     <fieldset>
                         <legend>Pregunta 1</legend>
-                        <label>
-                            ¿Cuál es el nombre completo del circuito de MotoGP?
-                            <input type="text" name="pregunta1" required />
-                        </label>
+                        <label for="pregunta1">¿Cuál es el nombre completo del circuito de MotoGP?</label>
+                        <input type="text" id="pregunta1" name="pregunta1" required />
                     </fieldset>
                     
                     <fieldset>
                         <legend>Pregunta 2</legend>
-                        <label>
-                            ¿En qué lugar nació Maverick Viñales?
-                            <input type="text" name="pregunta2" required />
-                        </label>
+                        <label for="pregunta2">¿En qué lugar nació Maverick Viñales?</label>
+                        <input type="text" id="pregunta2" name="pregunta2" required />
                     </fieldset>
                     
                     <fieldset>
                         <legend>Pregunta 3</legend>
-                        <label>
-                            ¿Cuál es la longitud del circuito en metros?
-                            <input type="number" name="pregunta3" required />
-                        </label>
+                        <label for="pregunta3">¿Cuál es la longitud del circuito en metros?</label>
+                        <input type="number" id="pregunta3" name="pregunta3" required />
                     </fieldset>
                     
                     <fieldset>
                         <legend>Pregunta 4</legend>
-                        <label>
-                            ¿Cuántas vueltas tiene la carrera?
-                            <input type="number" name="pregunta4" required />
-                        </label>
+                        <label for="pregunta4">¿Cuántas vueltas tiene la carrera?</label>
+                        <input type="number" id="pregunta4" name="pregunta4" required />
                     </fieldset>
                     
                     <fieldset>
                         <legend>Pregunta 5</legend>
-                        <label>
-                            ¿Quién es el vencedor de la última carrera?
-                            <input type="text" name="pregunta5" required />
-                        </label>
+                        <label for="pregunta5">¿Quién es el vencedor de la última carrera?</label>
+                        <input type="text" id="pregunta5" name="pregunta5" required />
                     </fieldset>
                     
                     <fieldset>
                         <legend>Pregunta 6</legend>
-                        <label>
-                            ¿Quién lidera la clasificación mundial al terminar la carrera?
-                            <input type="text" name="pregunta6" required />
-                        </label>
+                        <label for="pregunta6">¿Quién lidera la clasificación mundial al terminar la carrera?</label>
+                        <input type="text" id="pregunta6" name="pregunta6" required />
                     </fieldset>
                     
                     <fieldset>
                         <legend>Pregunta 7</legend>
-                        <label>
-                            ¿Cuántos puntos tiene el líder del mundial?
-                            <input type="number" name="pregunta7" required />
-                        </label>
+                        <label for="pregunta7">¿Cuántos puntos tiene el líder del mundial?</label>
+                        <input type="number" id="pregunta7" name="pregunta7" required />
                     </fieldset>
                     
                     <fieldset>
                         <legend>Pregunta 8</legend>
-                        <label>
-                            ¿Cuál es la anchura del circuito en metros?
-                            <input type="number" name="pregunta8" required />
-                        </label>
+                        <label for="pregunta8">¿Cuál es la anchura del circuito en metros?</label>
+                        <input type="number" id="pregunta8" name="pregunta8" required />
                     </fieldset>
                     
                     <fieldset>
                         <legend>Pregunta 9</legend>
-                        <label>
-                            ¿Cuando logró Maverick Viñales su primera victoria en MotoGP?
-                            <input type="number" name="pregunta9" required />
-                        </label>
+                        <label for="pregunta9">¿Cuando logró Maverick Viñales su primera victoria en MotoGP?</label>
+                        <input type="number" id="pregunta9" name="pregunta9" required />
                     </fieldset>
                     
                     <fieldset>
                         <legend>Pregunta 10</legend>
-                        <label>
-                            ¿En que posición terminó Maverick Viñales el año pasado?
-                            <input type="number" name="pregunta10" required />
-                        </label>
+                        <label for="pregunta10">¿En que posición terminó Maverick Viñales el año pasado?</label>
+                        <input type="number" id="pregunta10" name="pregunta10" required />
                     </fieldset>
                     
                     <button type="submit" name="terminar">Terminar prueba</button>
@@ -424,7 +413,6 @@ if (isset($_POST['guardar_resultados'])) {
             </section>
             
         <?php else: ?>
-            <!-- Formulario para el observador -->
             <section>
                 <h2>Datos de la Prueba</h2>
                 <form method="post" action="prueba_usabilidad.php">
@@ -432,38 +420,39 @@ if (isset($_POST['guardar_resultados'])) {
                         <legend>Información del Usuario</legend>
                         <p>ID del Usuario: <strong><?= $_SESSION['id_usuario'] ?? '' ?></strong></p>
                         <input type="hidden" name="id_usuario" value="<?= $_SESSION['id_usuario'] ?? '' ?>" />
-                        <label>
-                            Dispositivo utilizado:
-                            <select name="id_dispositivo" required>
+                        
+                        <p>
+                            <label for="id_dispositivo">Dispositivo utilizado:</label>
+                            <select id="id_dispositivo" name="id_dispositivo" required>
                                 <option value="">Seleccione...</option>
                                 <option value="1">Ordenador</option>
                                 <option value="2">Tableta</option>
                                 <option value="3">Teléfono</option>
                             </select>
-                        </label>
+                        </p>
                     </fieldset>
 
                     <fieldset>
                         <legend>Valoración y Observaciones</legend>
-                        <label>
-                            Valoración global de la experiencia (0-10):
-                            <input type="number" name="valoracion" min="0" max="10" step="0.1" required />
-                        </label>
-                        <br>
-                        <label>
-                            Propuestas de mejora:
-                            <textarea name="propuestas_mejora" rows="3" placeholder="¿Qué mejorarías?"></textarea>
-                        </label>
-                        <br>
-                        <label>
-                            Comentarios sobre problemas encontrados:
-                            <textarea name="comentarios_problemas" rows="3" placeholder="¿Qué problemas ha detectado el usuario?"></textarea>
-                        </label>
-                        <br>
-                        <label>
-                            Observaciones del facilitador:
-                            <textarea name="comentarios_facilitador" rows="3" placeholder="Observaciones sobre el comportamiento del usuario, dificultades encontradas, sugerencias..."></textarea>
-                        </label>
+                        <p>
+                            <label for="valoracion">Valoración global de la experiencia (0-10):</label>
+                            <input type="number" id="valoracion" name="valoracion" min="0" max="10" step="0.1" required />
+                        </p>
+                        
+                        <p>
+                            <label for="propuestas_mejora">Propuestas de mejora:</label>
+                            <textarea id="propuestas_mejora" name="propuestas_mejora" rows="3" placeholder="¿Qué mejorarías?"></textarea>
+                        </p>
+                        
+                        <p>
+                            <label for="comentarios_problemas">Comentarios sobre problemas encontrados:</label>
+                            <textarea id="comentarios_problemas" name="comentarios_problemas" rows="3" placeholder="¿Qué problemas ha detectado el usuario?"></textarea>
+                        </p>
+                        
+                        <p>
+                            <label for="comentarios_facilitador">Observaciones del facilitador:</label>
+                            <textarea id="comentarios_facilitador" name="comentarios_facilitador" rows="3" placeholder="Observaciones sobre el comportamiento del usuario, dificultades encontradas, sugerencias..."></textarea>
+                        </p>
                     </fieldset>
 
                     <button type="submit" name="guardar_resultados">Guardar Resultados</button>
