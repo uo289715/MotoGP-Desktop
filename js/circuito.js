@@ -93,7 +93,8 @@ class CargadorSVG {
     #leerArchivoSVGDesdeArchivos(files) {
         const archivo = files[0];
         if (!archivo) return alert('No se ha seleccionado ningún archivo.');
-        if (archivo.type !== 'image/svg+xml' && !archivo.name.endsWith('.svg')) return alert('Por favor, selecciona un archivo SVG válido.');
+        if (archivo.type !== 'image/svg+xml' && !archivo.name.endsWith('.svg')) 
+            return alert('Por favor, selecciona un archivo SVG válido.');
 
         const lector = new FileReader();
         lector.onload = (e) => this.#insertarSVG(e.target.result);
@@ -109,23 +110,21 @@ class CargadorSVG {
         const documentoSVG = parser.parseFromString(contenidoTexto, 'image/svg+xml');
         const elementoSVG = documentoSVG.documentElement;
 
-        if (elementoSVG) {
-            elementoSVG.setAttribute("version", "1.1");
-            document.querySelector("main").appendChild(elementoSVG);
-        }
-
         const errorNode = documentoSVG.querySelector('parsererror');
         if (errorNode) return alert('Error al parsear el archivo SVG.');
 
-        const h3 = contenedor.querySelector('h3');
-        const p = contenedor.querySelector('p');
-        const label = contenedor.querySelector('label');
-
-        contenedor.innerHTML = '';
-        if (h3) contenedor.appendChild(h3);
-        if (p) contenedor.appendChild(p);
-        if (label) contenedor.appendChild(label);
-        contenedor.appendChild(elementoSVG);
+        if (elementoSVG) {
+            elementoSVG.setAttribute("version", "1.1");
+            
+            // Eliminar SVG anterior si existe (para evitar duplicados)
+            const svgAnterior = contenedor.querySelector('svg');
+            if (svgAnterior) {
+                svgAnterior.remove();
+            }
+            
+            // Simplemente añadir el nuevo SVG al contenedor
+            contenedor.appendChild(elementoSVG);
+        }
     }
 }
 
