@@ -46,27 +46,46 @@
         <section>
             <h3>Cargar Información del Circuito</h3>
             <p>Selecciona el archivo InfoCircuito.html para cargar la información del circuito:</p>
-            <label>
-                <input type="file" accept=".html,.htm" />
-            </label>
+
+            <label for="archivoInfoCircuito">Archivo de información del circuito (HTML)</label>
+            <input
+                type="file"
+                id="archivoInfoCircuito"
+                name="archivoInfoCircuito"
+                accept=".html,.htm"
+            />
         </section>
+
 
         <section>
             <h3>Cargar Mapa SVG del Circuito</h3>
             <p>Selecciona un archivo SVG con el mapa del circuito:</p>
-            <label>
-                <input type="file" accept=".svg,image/svg+xml" onchange="leerArchivoSVG(this.files)" />
-            </label>
+
+            <label for="archivoSVG">Mapa del circuito en formato SVG</label>
+            <input
+                type="file"
+                id="archivoSVG"
+                name="archivoSVG"
+                accept=".svg,image/svg+xml"
+                onchange="leerArchivoSVG(this.files)"
+            />
         </section>
+
 
         <section>
             <h3>Cargar Archivo KML del Circuito</h3>
             <p>Selecciona el archivo circuito.kml para cargar las coordenadas del circuito:</p>
-            <label>
-                <input type="file" accept=".kml" onchange="leerArchivoKML(this.files)" />
-            </label>
-            <div></div>
+
+            <label for="archivoKML">Archivo KML con las coordenadas del circuito</label>
+            <input
+                type="file"
+                id="archivoKML"
+                name="archivoKML"
+                accept=".kml"
+                onchange="leerArchivoKML(this.files)"
+            />
         </section>
+
 
         <section>
             <h3>Mapa Dinámico del Circuito</h3>
