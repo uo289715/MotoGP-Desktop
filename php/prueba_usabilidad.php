@@ -278,7 +278,9 @@ if (isset($_POST['guardar_resultados'])) {
 
 <body>
     <header>
-        <h1>Prueba de Usabilidad - MotoGP Desktop</h1>
+        <h1>
+            <a href="index.html" title="Ir a la página principal">Prueba de Usabilidad - MotoGP Desktop</a>
+        </h1>
     </header>
 
     <main>
